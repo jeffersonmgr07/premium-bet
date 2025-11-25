@@ -12,27 +12,27 @@ export default function Header() {
         </span>
       </div>
 
-      <div className="hidden md:flex gap-4 text-sm">
+      <div className="hidden md:flex gap-4">
         <button className="bg-white text-orange-500 font-semibold rounded-full px-4 py-1">
           En vivo
         </button>
-        <button className="bg-white/10 rounded-full px-4 py-1 border border-white/30">
+        <button className="bg-white/10 rounded-full px-4 py-1">
           Fútbol
         </button>
       </div>
 
-      <div className="flex items-center gap-3 text-sm">
+      <div className="flex items-center gap-3">
         {user ? (
           <>
             <div className="text-right">
-              <p>Hola, {user.name}</p>
+              <p className="text-sm">Hola, {user.name}</p>
               <p className="text-xs">
                 Saldo: <span className="font-semibold">S/ {user.balance.toFixed(2)}</span>
               </p>
             </div>
             <button
               onClick={logout}
-              className="bg-white text-orange-500 font-semibold rounded-full px-4 py-1 text-xs md:text-sm"
+              className="bg-white text-orange-500 font-semibold rounded-full px-4 py-1 text-sm"
             >
               Cerrar sesión
             </button>
@@ -41,13 +41,13 @@ export default function Header() {
           <>
             <a
               href="/login"
-              className="bg-white text-orange-500 font-semibold rounded-full px-4 py-1 text-xs md:text-sm"
+              className="bg-white text-orange-500 font-semibold rounded-full px-4 py-1 text-sm"
             >
               Iniciar sesión
             </a>
             <a
               href="/register"
-              className="border border-white font-semibold rounded-full px-4 py-1 text-xs md:text-sm"
+              className="border border-white font-semibold rounded-full px-4 py-1 text-sm"
             >
               Registrarse
             </a>
